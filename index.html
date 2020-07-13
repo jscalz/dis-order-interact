@@ -1,15 +1,177 @@
 <!DOCTYPE html>
 <html>
  <head>
+   <link rel="stylesheet" href="./plyr.css" />
    <title>dis(ORDER)</title>
+   <style>
+     html, body {
+       font-family: "Verdana", sans-serif;
+       text-align: center;
+       background-color: white;
+       color: black;
+     }
+
+     #header {
+       background: #EFEEEE;
+
+     }
+
+     .button {
+       cursor: pointer;
+     }
+
+     #name-block {
+       padding-top: 15px;
+       margin-bottom: 0px;
+
+     }
+     #name-text {
+       font-family: "Andale Mono", monospace;
+       font-size: 1.5em;
+       line-height: 0em;
+       color: #353535;
+     }
+
+     #line0 {
+       display: inline-flex;
+       height: .75px;
+       width: 75%;
+       background-color: #353535;
+
+     }
+
+
+     #nav {
+       margin-top: 2px;
+       width: 75%;
+       color: black;
+       font-family: "Andale Mono", monospace;
+       font-size: .9em;
+       display: inline-grid;
+       grid-template-columns: 6% 30% 22% 27% 22%;
+       grid-template-rows: 1fr;
+       align-items: center;
+         
+     }
+
+     #nav-links {
+       color: #000000;
+       text-decoration: none;
+     }
+
+     #line1 {
+       display: inline-flex;
+       height: .75px;
+       width: 75%;
+       margin-bottom: 10px;
+       background-color: black;
+     }
+
+
+     #play {
+       margin: 45px auto 0px auto;
+       width: 75%;
+     }
+     #play-title {
+       font-size: 3em;
+       font-family: 'Andale Mono', monospace;
+     }
+
+     #play-text{
+       padding-top: 35px;
+       text-align: left;
+       font-family: 'Verdana', sans-serif;
+       font-size: .9em;
+     }
+
+
+     #headimg {
+       margin-top: 25px;
+       position: inline; 
+       top: 0%;  
+       width: 100%; 
+       height: 100%;
+     }
+     #headimg1 {
+       position: inline; 
+       top: 0; 
+       left: 0; 
+       right: 0; 
+       bottom: 0; 
+       margin: auto; 
+       min-width: 75%;
+       min-height: 75%;
+       }
+
+
+
+
+
+     #options {
+       width: 75%;
+       display: inline-block;
+       color: #282829;
+       font-family: 'Andale Mono', monospace;
+       text-align: left;
+     }
+     #options-label {
+       font-size: 1.2em;
+
+     }
+     #options-button {
+       display: inline-flex;
+       justify-content: space-around;
+       margin: 5px auto 10px auto; 
+       
+     }
+     #medication {
+       max-width: 50%;
+     }
+     #group-therapy {
+       max-width: 50%;
+     }
+     #meditation {
+       max-width: 50%;
+
+     }
+     #private-therapy{
+       max-width: 50%;
+     }
+
+
+     #volume {
+       width: 75%;
+       display: inline-block;
+       color: #282829;
+       font-family: 'Andale Mono', monospace;
+       text-align: left;
+
+     }
+     #volume-label {
+       font-size: 1.2em;
+
+     }
+     #volume-button {
+       display: inline-flex;
+       justify-content: space-around;
+       margin: 5px auto 10px auto; 
+
+     }
+
+     #reset {
+       width: 75%;
+       display: inline-block;
+
+     }
+   </style>
  </head>
  <body>
  
-<div id="header">
-   <div id="name-block">
-  <h1 id="name-text">dis(ORDER)</h1>
-  
-</div>
+  <div id="header">
+     <div id="name-block">
+    <h1 id="name-text">dis(ORDER)</h1>
+    
+  </div>
   
     
   <div id="line0"> 
@@ -41,204 +203,72 @@
    
    
    <div id="headimg">
-     <img src="https://live.staticflickr.com/65535/50079269956_bd4eff7f04_b.jpg" style="height:100%" id="headimg1" alt="Image of Mandelbrot">
+     <video id="player" style="margin: 45px auto 0px auto;height: 50vh;" data-poster="https://live.staticflickr.com/65535/50079269956_bd4eff7f04_b.jpg">
+       <source src="./anim.mp4" type="video/mp4" />
+     </video>
+     <!--<img src="" style="height:100%" id="headimg1" alt="Image of Mandelbrot">-->
    </div>
    
    
       <div id="options">
-  <h2 id="options-label">RELIEF OPTIONS</h2>
 
-   <ul id="options-button" style="list-style: none"> 
-     <li><img id="medication" src="https://live.staticflickr.com/65535/50081293882_c78f70a616_m.jpg" alt="Medication"></li>
-     <li> <img id="group-therapy" src="https://live.staticflickr.com/65535/50081293847_65d755bc66_m.jpg" alt="Group Therapy"></li>
-     <li> <img id="meditation" src="https://live.staticflickr.com/65535/50080468693_1683d8cd84_m.jpg" alt="Meditation"></li>
-     <li><img id="private-therapy" src="https://live.staticflickr.com/65535/50080468658_ca800997bd_m.jpg" alt="Private Therapy"></li>
-  </ul>    
+  <div style="display:flex;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;"> 
+      <h2 id="options-label">RELIEF OPTIONS</h2>
+      <div>
+        <img id="medication" class="button" src="https://live.staticflickr.com/65535/50081293882_c78f70a616_m.jpg" alt="Medication">
+        <img id="meditation" class="button" src="https://live.staticflickr.com/65535/50080468693_1683d8cd84_m.jpg" alt="Meditation">
+      </div>
+      <div>
+        <img id="group-therapy" class="button" src="https://live.staticflickr.com/65535/50081293847_65d755bc66_m.jpg" alt="Group Therapy">
+        <img id="private-therapy" class="button" src="https://live.staticflickr.com/65535/50080468658_ca800997bd_m.jpg" alt="Private Therapy">
+      </div>
+    </div>    
+    <div>
+      <h2 id="options-label">CHAOS TRACKER</h2>
+      <div style="position:relative;z-index:1">
+        <img src="./brot.jpg" height="300"/>
+        <!-- tracker's width goes from 0px to 450px -->
+        <div id="chaos-tracker" style="position:absolute;top:0px;right:0px;z-index:3;height:300px;width:0px;background-color:rgba(255,20,147,.2);border-left:1px solid rgb(255,20,147);"></div>
+      </div>
+    </div>
+  </div>
 </div> 
    
-   
-   <div id="volume">
-     <h2 id="volume-label">VOLUME</h2>
-
-   <ul id="volume-button" style="list-style: none"> 
-     <li><img id="vol-up" src="https://live.staticflickr.com/65535/50081293762_e9bccd0467_t.jpg" alt="Volume Up"></li>
-     <li> <img id="vol-down" src="https://live.staticflickr.com/65535/50080468583_c6b03f8c8e_t.jpg" alt="Volume Down"></li>
-     </ul>
-   </div>
-   
-   
    <div id="reset">
-       <img src="https://live.staticflickr.com/65535/50081293752_2f76a662dd_t.jpg">
+       <img id="reset-button" class="button" src="https://live.staticflickr.com/65535/50081293752_2f76a662dd_t.jpg">
    </div>
-     
-     
-   
+   <script src="./plyr.polyfilled.min.js"></script>
+   <script type="text/javascript" defer>
+     const trackerWidth = 450
+     const player = new Plyr('#player')
+     player.speed = 1
+     player.on('timeupdate', event => {
+       const inst = event.detail.plyr
+       // update tracker
+       const newWidth = inst.currentTime / inst.duration * trackerWidth
+       document.getElementById('chaos-tracker').style.width = `${newWidth}px`
+    });
+     document.addEventListener('click', function (e) {
+       if (e.target && e.target.id === 'medication') {
+         // 6s back
+         player.currentTime -= 6
+       }
+       if (e.target && e.target.id === 'meditation') {
+         // 4s back
+         player.currentTime -= 4
+       }
+       if (e.target && e.target.id === 'group-therapy') {
+         // 2s back
+         player.currentTime -= 2
+       }
+       if (e.target && e.target.id === 'private-therapy') {
+         // 5s back
+         player.currentTime -= 5
+       }
+       if (e.target && e.target.id === 'reset-button') {
+       }
+     })
+   </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-<style>
-html,
-body {
-  font-family: "Verdana", sans-serif;
-  text-align: center;
-  background-color: white;
-  color: black;
-}
-
-#header {
-  background: #EFEEEE;
-
-}
-
-#name-block {
-  padding-top: 15px;
-  margin-bottom: 0px;
-
-}
-#name-text {
-  font-family: "Andale Mono", monospace;
-  font-size: 1.5em;
-  line-height: 0em;
-  color: #353535;
-}
-
-#line0 {
-  display: inline-flex;
-  height: .75px;
-  width: 75%;
-  background-color: #353535;
-
-}
-
-
-#nav {
-  margin-top: 2px;
-  width: 75%;
-  color: black;
-  font-family: "Andale Mono", monospace;
-  font-size: .9em;
-  display: inline-grid;
-  grid-template-columns: 6% 30% 22% 27% 22%;
-  grid-template-rows: 1fr;
-  align-items: center;
-    
-}
-
-#nav-links {
-  color: #000000;
-  text-decoration: none;
-}
-
-#line1 {
-  display: inline-flex;
-  height: .75px;
-  width: 75%;
-  margin-bottom: 10px;
-  background-color: black;
-}
-
-
-#play {
-  margin: 45px auto 0px auto;
-  width: 75%;
-}
-#play-title {
-  font-size: 3em;
-  font-family: 'Andale Mono', monospace;
-}
-
-#play-text{
-  padding-top: 35px;
-  text-align: left;
-  font-family: 'Verdana', sans-serif;
-  font-size: .9em;
-}
-
-
-#headimg {
-  margin-top: 25px;
-  position: inline; 
-  top: 0%;  
-  width: 100%; 
-  height: 100%;
-}
-#headimg1 {
-  position: inline; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 75%;
-  min-height: 75%;
-  }
-
-
-
-
-
-#options {
-  width: 75%;
-  display: inline-block;
-  color: #282829;
-  font-family: 'Andale Mono', monospace;
-  text-align: left;
-}
-#options-label {
-  font-size: 1.2em;
-
-}
-#options-button {
-  display: inline-flex;
-  justify-content: space-around;
-  margin: 5px auto 10px auto; 
-  
-}
-#medication {
-  max-width: 50%;
-}
-#group-therapy {
-  max-width: 50%;
-}
-#meditation {
-  max-width: 50%;
-
-}
-#private-therapy{
-  max-width: 50%;
-}
-
-
-#volume {
-  width: 75%;
-  display: inline-block;
-  color: #282829;
-  font-family: 'Andale Mono', monospace;
-  text-align: left;
-
-}
-#volume-label {
-  font-size: 1.2em;
-
-}
-#volume-button {
-  display: inline-flex;
-  justify-content: space-around;
-  margin: 5px auto 10px auto; 
-
-}
-
-#reset {
-  width: 75%;
-  display: inline-block;
-
-}
-</style>
