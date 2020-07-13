@@ -241,6 +241,7 @@
    <script src="./plyr.polyfilled.min.js"></script>
    <script type="text/javascript" defer>
      const trackerWidth = 450
+     const slower = (value, percent) => value - (value * percent)
      const player = new Plyr('#player')
      player.speed = 1
      player.on('timeupdate', event => {
@@ -248,25 +249,38 @@
        // update tracker
        const newWidth = inst.currentTime / inst.duration * trackerWidth
        document.getElementById('chaos-tracker').style.width = `${newWidth}px`
-    });
+     });
+     // linear increase in speed interpolated over 5 seconds always
      document.addEventListener('click', function (e) {
        if (e.target && e.target.id === 'medication') {
          // 6s back
          player.currentTime -= 6
+         // 10% slower
+         console.log('slower', slower(player.speed, .1))
+         player.speed = slower(player.speed, .1)
+         console.log('player speed', player.speed)
        }
        if (e.target && e.target.id === 'meditation') {
          // 4s back
          player.currentTime -= 4
+         // 4% slower
+         player.speed = slower(player.speed, .04)
        }
        if (e.target && e.target.id === 'group-therapy') {
          // 2s back
          player.currentTime -= 2
+         // 2% slower
+         player.speed = slower(player.speed, .02)
        }
        if (e.target && e.target.id === 'private-therapy') {
          // 5s back
          player.currentTime -= 5
+         // 6% slower
+         player.speed = slower(player.speed, .06)
        }
        if (e.target && e.target.id === 'reset-button') {
+         player.currentTime = 0
+         player.speed = 1
        }
      })
    </script>
