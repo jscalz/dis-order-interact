@@ -217,7 +217,7 @@
    
    
    <div id="headimg">
-     <video id="player" style="margin: 45px auto 0px auto;height: 70vh;" data-poster="https://live.staticflickr.com/65535/50116236148_a099f823b1_o.jpg">
+     <video id="player" style="margin: 45px auto 0px auto;height: 60vh;" data-poster="https://live.staticflickr.com/65535/50116236148_a099f823b1_o.jpg">
        <source src="./anim.mp4" type="video/mp4" />
      </video>
      <!--<img src="" style="height:100%" id="headimg1" alt="Image of Mandelbrot">-->
@@ -241,9 +241,9 @@
     <div>
       <h2 id="options-label">CHAOS TRACKER</h2>
       <div style="position:relative;z-index:1">
-        <img src="./brot.jpg" height="200"/>
+        <img src="./brot.jpg" height="180"/>
         <!-- tracker's width goes from 0px to 450px -->
-        <div id="chaos-tracker" style="position:absolute;top:0px;right:0px;z-index:3;height:200px;width:0px;background-color:rgba(255,20,147,.2);border-left:1px solid rgb(255,20,147);"></div>
+        <div id="chaos-tracker" style="position:absolute;top:0px;right:0px;z-index:3;height:180px;width:0px;background-color:rgba(255,20,147,.2);border-left:1px solid rgb(255,20,147);"></div>
       </div>
     </div>
   </div>
@@ -254,7 +254,7 @@
    </div>
    <script src="./plyr.polyfilled.min.js"></script>
    <script type="text/javascript" defer>
-     const trackerWidth = 450
+     const trackerWidth = 270
      const slower = (value, percent) => value - (value * percent)
      const player = new Plyr('#player')
      player.speed = 1
