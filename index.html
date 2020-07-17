@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <link rel="stylesheet" href="./plyr.css" />
+   <title>dis(ORDER)</title>
+   <style>
+     html, body {
+       font-family: "Verdana", sans-serif;
+       text-align: center;
+       background-color: white;
+       color: black;
+      margin: 0;
+     }
+
+     #header {
+       background: #1C1C1C;
+      padding-bottom: 15px;
+
+     }
+
+     .button {
+       cursor: pointer;
+     }
+
+     #name-block {
+       padding-top: 12px;
+       margin-bottom: 0px;
+      color: white;
+
+     }
+    
+    #name-link {
+     text-decoration: none;
+    }
+    
+     #name-text {
+       font-family: "Andale Mono", monospace;
+       font-size: 1.57em;
+       line-height: 0em;
+       color: #EDEDED;
+     }
+
+     #line0 {
+       display: inline-flex;
+      margin: 0;
+       height: .75px;
+       width: 75%;
+       background-color: #EDEDED;
+
+     }
+
+
+     #nav {
+       margin-top: 2px;
+       width: 75%;
+       color: #EDEDED;
+       font-family: "Andale Mono", monospace;
+       font-size: .9em;
+       display: inline-grid;
+       grid-template-columns: 6% 35% 17% 29.75% 17%;
+       grid-template-rows: 1fr;
+       align-items: center;
+         
+     }
+
+     #nav-links {
+       color: #EDEDED;
+       text-decoration: none;
+     }
+
+    /* #line1 {
+       display: inline-flex;
+       height: .75px;
+       width: 75%;
+       margin-bottom: 10px;
+       background-color: #EDEDED;
+     }*/
+
+
+     #play {
+       margin: 45px auto 0px auto;
+       width: 75%;
+     }
+     #play-title {
+       font-size: 3em;
+       font-family: 'Andale Mono', monospace;
+     }
+
+     #play-text{
+       padding-top: 75px;
+       text-align: left;
+       font-family: 'Verdana', sans-serif;
+       font-size: 1em;
+      line-height: 1.6em;
+     }
+
+
+     #headimg {
+       margin-top: 25px;
+       position: inline; 
+       top: 0%;  
+       width: 100%; 
+       height: 100%;
+     }
+     #headimg1 {
+       position: inline; 
+       top: 0; 
+       left: 0; 
+       right: 0; 
+       bottom: 0; 
+       margin: auto; 
+       min-width: 75%;
+       min-height: 75%;
+       }
+
+
+
+
+
+  /*   #options {
+       width: 75%;
+       display: inline-block;
+       color: #282829;
+       font-family: 'Andale Mono', monospace;
+       text-align: left;
+     }*/
+     #options-label {
+       font-size: 1.2em;
+
+     }
+    /* #options-button {
+       display: inline-flex;
+       justify-content: space-around;
+       margin: 5px auto 10px auto; 
+       
+     }*/
+     #medication {
+       max-width: 125px;
+      min-width: 50px;
+     }
+     #group-therapy {
+       max-width: 125px;
+      min-width: 50px;
+     }
+     #meditation {
+      max-width: 125px;
+      min-width: 50px;
+
+     }
+     #private-therapy{
+       max-width: 125px;
+      min-width: 50px;
+     }
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  font-family: 'Andale Mono';
+
+}
+.column2 {
+  float: right;
+  width: 40%;
+  padding: 10px;
+  font-family: 'Andale Mono';
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+     #reset {
+       width: 75%;
+      margin-bottom: 10px;
+       display: inline-block;
+
+     }
+   </style>
+ </head>
+ <body>
+ 
+  <div id="header">
+     <div id="name-block">
+         <a id="name-link" href="https://jscalz.github.io/dis-order">
+          <h1 id="name-text">dis(ORDER)</h1></a>
+    
+  </div>
+  
+    
+  <div id="line0"> 
+   </div>
+  
+   
+   <div id="nav">
+     <div id="nav-about"><a id="nav-links" href="https://jscalz.github.io/dis-order/#about">ABOUT</a></div>
+     <div id="nav-play"><a id="nav-links" href="https://jscalz.github.io/dis-order-interact/">INTERACT</a></div>
+     <div id="nav research"><a id="nav-links" href="https://jscalz.github.io/dis-order-research">RESEARCH</a></div>
+     <div id="nav-show"><a id="nav-links" href="https://jscalz.github.io/dis-order-show">SHOW</a></div>
+     <div id="nav-contact"><a id="nav-links" href="https://jscalz.github.io/dis-order/#contact">CONTACT</a></div>
+   </div>
+   
+   
+  
+   </div>
+
+   <div id="play">
+   <div id="play-title">INTERACT</div>
+   
+   <div id="play-text">
+      <h3> Can you control the chaos? </h3>
+    <br>
+   
+    <p>INSTRUCTIONS:</p>
+       
+       <p>Click the play button to begin. As the animation moves forward, you will begin to see the visuals and music shift from serene to chaotic. </p>
+     
+     <p> Before the animation reaches the end, press any of the Relief Option buttons to take the chaos back a notch. The more you press, the bigger the impact. Press the buttons as many times in any order you want, but beware of pressing too often!</p>
+    <p>[HD version coming soon!] <i>Interact programming by Phillip Quiza. </i></p>
+    </div>
+   </div>
+   
+   
+   <div id="headimg">
+     <video id="player" style="margin: 45px auto 0px auto;height: 60vh;" data-poster="https://live.staticflickr.com/65535/50116236148_a099f823b1_o.jpg">
+       <source src="./anim.mp4" type="video/mp4" />
+     </video>
+     <!--<img src="" style="height:100%" id="headimg1" alt="Image of Mandelbrot">-->
+   </div>
+   
+   
+     /* <div id="options">
+
+  <div style="display:flex;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;"> */
+ <div class="row">
+  <div class="column1">
+      <h2 id="options-label">RELIEF OPTIONS</h2>
+     
+        <img id="medication" class="button" src="button_medication.png" alt="Medication">
+        <img id="meditation" class="button" src="button_meditation.png" alt="Meditation">
+      
+        <img id="group-therapy" class="button" src="button_group.png" alt="Group Therapy">
+        <img id="private-therapy" class="button" src="button_private.png" alt="Private Therapy">
+      </div>  
+  
+     <div class="column2">
+      <h2 id="options-label">CHAOS TRACKER</h2>
+      <div style="position:relative;z-index:1">
+        <img src="./brot.jpg" height="180"/>
+        <!-- tracker's width goes from 0px to 450px -->
+        <div id="chaos-tracker" style="position:absolute;top:0px;right:0px;z-index:3;height:180px;width:0px;background-color:rgba(255,20,147,.2);border-left:1px solid rgb(255,20,147);"></div>
+      </div>
+
+  </div>
+</div> 
+   
+   <div id="reset">
+       <img id="reset-button" class="button" src="button_reset.png" width="15%">
+   </div>
+   <script src="./plyr.polyfilled.min.js"></script>
+   <script type="text/javascript" defer>
+     const trackerWidth = 270
+     const slower = (value, percent) => value - (value * percent)
+     const player = new Plyr('#player')
+     player.speed = 1
+     player.on('timeupdate', event => {
+       const inst = event.detail.plyr
+       // update tracker
+       const newWidth = inst.currentTime / inst.duration * trackerWidth
+       document.getElementById('chaos-tracker').style.width = `${newWidth}px`
+     });
+     // linear increase in speed interpolated over 5 seconds always
+     document.addEventListener('click', function (e) {
+       if (e.target && e.target.id === 'medication') {
+         // 6s back
+         player.currentTime -= 6
+         // 10% slower
+         console.log('slower', slower(player.speed, .1))
+         player.speed = slower(player.speed, .1)
+         console.log('player speed', player.speed)
+       }
+       if (e.target && e.target.id === 'meditation') {
+         // 4s back
+         player.currentTime -= 4
+         // 4% slower
+         player.speed = slower(player.speed, .04)
+       }
+       if (e.target && e.target.id === 'group-therapy') {
+         // 2s back
+         player.currentTime -= 2
+         // 2% slower
+         player.speed = slower(player.speed, .02)
+       }
+       if (e.target && e.target.id === 'private-therapy') {
+         // 5s back
+         player.currentTime -= 5
+         // 6% slower
+         player.speed = slower(player.speed, .06)
+       }
+       if (e.target && e.target.id === 'reset-button') {
+         player.currentTime = 0
+         player.speed = 1
+       }
+     })
+   </script>
+  </body>
+</html>
+
+
+
